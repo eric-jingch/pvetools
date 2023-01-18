@@ -1947,8 +1947,8 @@ Your hardware do not support PCI Passthrough(No IOMMU)
     if [ ${bver} -gt 6 ];then
         iommu=$iommu" iommu=pt pcie_acs_override=downstream"
     fi
-    if [ `grep $iommu /etc/default/grub|wc -l` = 0 ];then
-        sed -i.bak 's|quiet|quiet '$iommu'|' /etc/default/grub
+    if [ `grep "$iommu" /etc/default/grub|wc -l` = 0 ];then
+        sed -i.bak "s|quiet|quiet $iommu|" /etc/default/grub
         update-grub
         if [ `grep "vfio" /etc/modules|wc -l` = 0 ];then
             cat <<EOF >> /etc/modules
