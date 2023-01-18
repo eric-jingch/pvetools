@@ -22,7 +22,7 @@ for english user,please look the end of readme.
 
 ```
 export LC_ALL=en_US.UTF-8
-apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git
+apt update && apt -y install git && git clone https://github.com/eric-jingch/pvetools.git
 cd pvetools
 ./pvetools.sh
 ```
@@ -30,7 +30,7 @@ cd pvetools
 ### 一键无脑安装:
 
 ```
-echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm /etc/apt/sources.list.d/pve-enterprise.list && export LC_ALL=en_US.UTF-8 && apt update && apt -y install git && git clone https://github.com/ivanhao/pvetools.git && cd pvetools && ./pvetools.sh
+echo "nameserver  8.8.8.8" >> /etc/resolv.conf && rm /etc/apt/sources.list.d/pve-enterprise.list && export LC_ALL=en_US.UTF-8 && apt update && apt -y install git && git clone https://github.com/eric-jingch/pvetools.git && cd pvetools && ./pvetools.sh
 
 ```
 
